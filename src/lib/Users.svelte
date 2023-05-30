@@ -64,6 +64,16 @@
         // console.log(detail)
         users = users.filter((user) => user.id != detail)
     }
+    const addDeveloper = ({detail}) => {
+        // console.log(detail)
+        users = [
+            ...users, {
+                id: users.length+1,
+                image: Image,
+                ...detail
+            }
+        ]
+    }
     
 </script>
     
@@ -78,7 +88,7 @@
             <option value={false}> Inactive </option>
         </select>
         
-        <NewUser />
+        <NewUser on:addDev={addDeveloper}/>
     </div>
 
     <div class="userList">
@@ -141,5 +151,9 @@
         border-radius: 0.5rem;
         outline: none;
         background-color: #e0e0e0;
+    }
+    select option {
+        background: #000070;
+        color: #fff;
     }
 </style>

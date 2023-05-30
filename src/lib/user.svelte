@@ -12,7 +12,7 @@
 
 </script>
 
-<div class="user">
+<div class="user" style:background-color={ user.active == true ? "#a9ffca" : "#ffbcbc" } >
     <p> {i+1} </p>
     <img src={user.image} alt={user.name}>
     <div class="userMiniInfo">
@@ -28,7 +28,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        background-color: #e0e0e0;
+        background-color: #ffbcbc;
         padding: 1rem;
         border-radius: 1rem;
         border: #e0e0e0 solid 2px;
